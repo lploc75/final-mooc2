@@ -1,0 +1,122 @@
+/* Đặt lại các style mặc định */
+body,
+h1,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Các style chung cho header (Đầu trang) */
+header {
+    background-color: #333;
+    /* Màu nền đen */
+    color: white;
+    /* Màu chữ trắng */
+    padding: 10px;
+    /* Khoảng cách lề bên trong của header */
+}
+
+/* Các style cho thanh điều hướng */
+nav ul {
+    list-style-type: none;
+    /* Ẩn dấu chấm liệt kê */
+    display: flex;
+    /* Hiển thị các mục theo kiểu flexbox */
+    justify-content: center;
+    /* Căn giữa các mục */
+}
+
+nav ul li {
+    margin-right: 20px;
+    /* Khoảng cách giữa các mục trong thanh điều hướng */
+}
+
+nav ul li a {
+    color: white;
+    /* Màu chữ trắng */
+    text-decoration: none;
+    /* Ẩn gạch chân dưới văn bản */
+    padding: 5px 10px;
+    /* Khoảng cách lề bên trong của mỗi mục */
+    border-radius: 5px;
+    /* Đường viền cong */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng chuyển đổi màu nền khi di chuột qua */
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    /* Màu nền khi di chuột qua mục */
+}
+
+/* Các style chung cho nội dung chính (main) */
+main {
+    padding: 20px;
+    /* Khoảng cách lề bên trong của main */
+}
+
+/* Các style chung cho footer (Chân trang) */
+footer {
+    background-color: #333;
+    /* Màu nền đen */
+    color: white;
+    /* Màu chữ trắng */
+    text-align: center;
+    /* Căn giữa nội dung chân trang */
+    padding: 10px;
+    /* Khoảng cách lề bên trong của footer */
+}
+
+/* Style cho Gallery (Bộ Sưu Tập) */
+.gallery {
+    display: flex;
+    /* Sử dụng flexbox để hiển thị các ảnh trên cùng một hàng */
+    flex-wrap: wrap;
+    /* Cho phép các ảnh xuống dòng khi không đủ không gian */
+    justify-content: space-between;
+    /* Căn giữa và tạo khoảng cách đều giữa các ảnh */
+}
+
+.gallery img {
+    width: calc(50% - 5px);
+    /* Đặt chiều rộng cho mỗi ảnh là 50% của phần tử cha với khoảng cách 5px */
+    margin-bottom: 10px;
+    /* Khoảng cách dưới của mỗi ảnh */
+    border-radius: 10px;
+    /* Đường viền cong cho ảnh */
+}
+
+/* Link "Skip to Main Content" */
+.skip-link {
+    position: fixed;
+    /* Vị trí cố định khi cuộn trang */
+    top: -40px;
+    /* Đẩy lên ngoài màn hình */
+    left: 10px;
+    /* Cách mép trái 10px */
+    background-color: #333;
+    /* Màu nền đen */
+    color: white;
+    /* Màu chữ trắng */
+    padding: 10px;
+    /* Khoảng cách lề bên trong của link */
+    z-index: 1000;
+    /* Đặt vị trí z-index để hiển thị trên các phần tử khác */
+    opacity: 0;
+    /* Ẩn link ban đầu */
+    transition: top 0.3s ease, opacity 0.3s ease;
+    /* Hiệu ứng chuyển đổi khi link được focus */
+}
+
+.skip-link:focus {
+    top: 10px;
+    /* Di chuyển link vào vùng nhìn thấy của người dùng */
+    opacity: 1;
+    /* Hiển thị link khi được focus */
+}
